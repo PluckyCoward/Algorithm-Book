@@ -1,0 +1,21 @@
+{
+  "name": "Algorithm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "markdown-it": "^10.0.0",
+    "markdown-it-katex": "^2.0.3",
+    "markdown-it-katex-external": "^1.0.0"
+  }
+}
