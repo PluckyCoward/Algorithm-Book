@@ -12,6 +12,8 @@ freopen("input.txt","r",stdin);
 
 ## 迭代器
 
+c++17后以下所有的类型声明可以用`auto`代替。
+
 #### 正向遍历
 
 ```cpp

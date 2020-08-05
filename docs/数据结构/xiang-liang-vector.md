@@ -13,7 +13,7 @@ vector<int> v = vector<int>(len,0)
 
 ### 静态方法
 
-**.push\_back\(\)** 压如一个数据
+**.push\_back\(\)** 压如一个数据(c++17后提供的emplace_back()会比push快)
 
 **.pop\_back\(\)** 删除末尾数据
 

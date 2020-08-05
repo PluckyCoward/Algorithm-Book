@@ -1,4 +1,6 @@
-> #include\<map>
+## 映射MAP
+
+> include\<map>
 
 map中存储着key与value，可以利用key访问到value。一般key为有序数，因为map会自动按照key的值进行从小到大的排序。
 
@@ -31,6 +33,7 @@ for(it = m1.begin();it!=m1.end();it++){
 
 ```cpp
 it = m1.find(2); //若没有找到，返回m1.end()
+m1.count(9)//不存在9的话返回0
 ```
 
 ### 删除
@@ -50,3 +53,8 @@ m1.erase(m1.begin(),m1.end());   //左闭右开
 
 **.clear\(\)**
 
+###unordered_map
+
+> include\<unordered_map>
+
+同unordered_set一样，用哈希实现的map。性质与unordered_set类似。

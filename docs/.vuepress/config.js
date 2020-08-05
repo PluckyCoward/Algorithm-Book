@@ -79,6 +79,14 @@ module.exports = {
           ['/动态规划/lps', 'LPS']
         ]
       }, {
+        title: '二分搜索',
+        path: '/二分搜索/',
+        sidebarDepth: 0,
+        children: [
+          ['/二分搜索/01search', '查找特定的数'],
+          ['/二分搜索/02insert', '查找指定条件'],   
+        ]
+      },{
         title: '图论',
         path: '/图论/',
         sidebarDepth: 2,
