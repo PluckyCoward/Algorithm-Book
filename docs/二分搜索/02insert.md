@@ -16,7 +16,7 @@ lower_bound查找的是第一个大于等于target的位置，考虑上述的`2`
 
 3. 先考虑右边界的更新情况:当`num[mid]>=target`(上一条解释了为什么有=)更新右边界，由于查找的是**第一个大于等于target的位置**，即找到的值应该**大于等于target**,所以当`num[mid]>=target`时，`num[mid]`有可能就是我们要查找的target，所以更新右边界需要包含mid，即`right = mid`而不是`right = mid - 1`；
 
-   再考虑左边界的更新情况:当`num[mid]<target`更新左边界，由于`num[mid]`比target小，可以判断`num[mid]`一定不是target，所以更新边界时不需要包含`mid`，即`left=num[mid]+1`。
+   再考虑左边界的更新情况:当`num[mid]<target`更新左边界，由于`num[mid]`比target小，可以判断`num[mid]`一定不是target，所以更新边界时不需要包含`mid`，即`left=mid+1`。
 
 最后我们考虑第一条，这个我还没找到什么规律，但是我猜普遍地如果有一个边界更新时要包含`mid`的话，最终left不可能大于right,所以退出循环的条件应该是`left=right`。
 
@@ -42,9 +42,23 @@ return left;
 
 ### upper_bound
 
-upper_bound查找的是第一个大于target的位置。
+upper_bound查找的是第一个大于target的位置，考虑上述的`2`和`3`。
 
-```
+2. 由于查找的是**第一个大于target的位置**，当`num[mid] == target`时，此时位置的数等于target，因此更新左边界。
 
+3. 先考虑左边界的更新情况：当`num[mid] <= target`更新左边界，而`num[mid]`必不可能是我们要找的位置，因此更新左边界时不需包含mid，即`left = mid + 1 `;
+
+   再考虑右边界的更新情况:当`num[mid] > target`更新右边界，由于`num[mid]`比target大，但无法判断是否是第一个大于target的位置，所以更新边界时需要包含`mid`，即`right = mid`。
+
+```cpp
+int left = 0,right = nums.size();
+while(left < right){
+  int mid = left + (right - left)/2;
+  if(nums[mid] <= target)
+    left = mid + 1;
+  else
+    right = mid;
+}
+return left;
 ```
 
