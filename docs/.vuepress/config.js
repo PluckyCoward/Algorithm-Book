@@ -84,7 +84,8 @@ module.exports = {
         sidebarDepth: 0,
         children: [
           ['/二分搜索/01search', '查找特定的数'],
-          ['/二分搜索/02insert', '查找指定条件'],   
+          ['/二分搜索/02insert', '查找指定条件'],
+          ['/二分搜索/03practice', '练习1']
         ]
       },{
         title: '图论',
