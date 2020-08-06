@@ -65,11 +65,16 @@ while(cnt >= 0 && arr[cnt]==first){
 ```cpp
 int findIndex(vector<int>& arr,int n){
   int left = 0,right = n - 1;
-  while(){
+  while(left < right){
     int mid = left + (right - left)/2;
-    
+    if (arr[mid] <= arr[right]) {
+      right = mid;
+    }
+    else {
+      left = mid + 1;
+    }
   }
-  return ;
+  return left;
 }
 ```
 
@@ -95,11 +100,17 @@ return bs(arr,left,right，target);
 
 ```cpp
 int bs(vector<int>& arr,int left,int right,int target){
-  while(){
+  while(left < right){
     int mid = left + (right - left)/2;
-    
+    if (arr[mid] >= target)
+      right = mid;
+    else
+      left = mid + 1;
 	}
-
+  if (arr[left] == target)
+    return left;
+  else
+		return -1;
 }
 ```
 
