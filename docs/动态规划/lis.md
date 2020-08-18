@@ -35,7 +35,7 @@ int LIS(int a[],int n){
                 if (a[j] < a[i] && d[j] > max_len)
                     max_len = d[j];
             }
-            d[i] = max_len == 0 ? 1 : max_len + 1;
+            d[i] = max_len + 1;
             res = d[i] > res ? d[i] : res;
         }
         return res;
